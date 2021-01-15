@@ -8,11 +8,13 @@ public class EnemyMovement : MonoBehaviour
     private Transform target;
     private int wavepointIndex = 0;
 
+    public PlayerStats playerStats;
     private Enemy _enemy;
     private void Start()
     {
         _enemy = GetComponent<Enemy>();
         target = Waypoints.wayPoints[0];
+        playerStats = GetComponent<PlayerStats>();
     }
     private void Update()
     {
@@ -42,6 +44,7 @@ public class EnemyMovement : MonoBehaviour
     void EndPath()
     {
         PlayerStats.Lives--;
+        //playerStats.RemoveLife();
         WaveSpawner.EnemiesAlive--;
         Destroy(gameObject);
     }

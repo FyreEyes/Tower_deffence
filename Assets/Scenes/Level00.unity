@@ -3168,7 +3168,7 @@ RectTransform:
   - {fileID: 806663601}
   - {fileID: 1271293370}
   m_Father: {fileID: 1691074437}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7779,7 +7779,7 @@ RectTransform:
   - {fileID: 324213295}
   - {fileID: 344343844}
   m_Father: {fileID: 1691074437}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -11570,7 +11570,7 @@ RectTransform:
   - {fileID: 1106388290}
   - {fileID: 1247241185}
   m_Father: {fileID: 1691074437}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -11593,17 +11593,17 @@ MonoBehaviour:
     prefab: {fileID: 6137988809019418323, guid: 3313177fb401e604f939f69a6b311d97, type: 3}
     cost: 100
     upgradedPrefab: {fileID: 6137988809019418323, guid: da65e0c425bcf0142855a784793748c6, type: 3}
-    upgradeCost: 100
+    upgradeCost: 50
   missileLauncher:
     prefab: {fileID: 2563073886800825806, guid: 547be0361def1b243bfafc75cde2f592, type: 3}
     cost: 250
     upgradedPrefab: {fileID: 2563073886800825806, guid: e59d5a8382d01514e86d567eb3058271, type: 3}
-    upgradeCost: 200
+    upgradeCost: 150
   laserBeamer:
     prefab: {fileID: 360892347561395061, guid: 21c776d6382881349ae0ced8363ed958, type: 3}
     cost: 350
     upgradedPrefab: {fileID: 360892347561395061, guid: 057a1e03d14f8a34a96db12d2d76dc6e, type: 3}
-    upgradeCost: 300
+    upgradeCost: 200
 --- !u!114 &1016764391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21867,10 +21867,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1016764389}
   - {fileID: 315219353}
   - {fileID: 719503854}
   - {fileID: 2031503008}
+  - {fileID: 1016764389}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23501,10 +23501,16 @@ MonoBehaviour:
     count: 3
     rate: 1
   - enemy: {fileID: 6576696861048545278, guid: dc7045bb768d7214fb35150d095f11cc, type: 3}
-    count: 5
+    count: 3
     rate: 1
   - enemy: {fileID: 6576696861048545278, guid: 461511c1b335eb84795f96b46b59c00c, type: 3}
     count: 3
+    rate: 1
+  - enemy: {fileID: 6576696861048545278, guid: da47fdc5ab3c4164092383d46baa6027, type: 3}
+    count: 10
+    rate: 1
+  - enemy: {fileID: 6576696861048545278, guid: 461511c1b335eb84795f96b46b59c00c, type: 3}
+    count: 10
     rate: 1
   spawnPoint: {fileID: 1457430373}
   waveCountdownText: {fileID: 189340415}
@@ -23550,10 +23556,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a64d7d910a96884898623066f7da94a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 200
-  moneyText: {fileID: 0}
-  startLives: 3
-  livesText: {fileID: 1933839795}
+  startMoney: 9999
+  startLives: 1
 --- !u!114 &1806103364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24651,6 +24655,7 @@ GameObject:
   - component: {fileID: 1933839796}
   - component: {fileID: 1933839795}
   - component: {fileID: 1933839794}
+  - component: {fileID: 1933839793}
   m_Layer: 5
   m_Name: Lives
   m_TagString: Untagged
@@ -24677,6 +24682,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 8}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1933839793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933839791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd0a6f986390cb43ad96a2001f11c2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  livesText: {fileID: 1933839795}
 --- !u!114 &1933839794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25929,7 +25947,7 @@ RectTransform:
   - {fileID: 1164775235}
   - {fileID: 2050258835}
   m_Father: {fileID: 1691074437}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
